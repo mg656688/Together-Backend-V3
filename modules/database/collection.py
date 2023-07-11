@@ -14,7 +14,7 @@ weeds = db.weed
 
 
 def addSeedlingImage(i_name, Type, time, url):
-    seedlings.insert({
+    seedlings.insert_one({
         "file_name": i_name,
         "prediction": Type,
         "upload_time": time,
@@ -23,7 +23,7 @@ def addSeedlingImage(i_name, Type, time, url):
 
 
 def addFlowerImage(i_name, Type, time, url):
-    flowers.insert({
+    flowers.insert_one({
         "file_name": i_name,
         "prediction": Type,
         "upload_time": time,
@@ -32,7 +32,7 @@ def addFlowerImage(i_name, Type, time, url):
 
 
 def addLeaveImage(i_name, Type, time, url):
-    leaves.insert({
+    leaves.insert_one({
         "file_name": i_name,
         "prediction": Type,
         "upload_time": time,
@@ -41,7 +41,7 @@ def addLeaveImage(i_name, Type, time, url):
 
 
 def addWeedImage(i_name, Type, time, url):
-    weeds.insert({
+    weeds.insert_one({
         "file_name": i_name,
         "prediction": Type,
         "upload_time": time,
@@ -50,7 +50,7 @@ def addWeedImage(i_name, Type, time, url):
 
 
 def addPaddyImage(i_name, Type, time, url):
-    paddy.insert({
+    paddy.insert_one({
         "file_name": i_name,
         "prediction": Type,
         "upload_time": time,
@@ -59,14 +59,14 @@ def addPaddyImage(i_name, Type, time, url):
 
 
 def cropRecommendation(Type, time):
-    crops.insert({
+    crops.insert_one({
         "prediction": Type,
         "upload_time": time
     })
 
 
 def pollutionReport(image, time, location):
-    pollution_report.insert({
+    pollution_report.insert_one({
         "prediction": image,
         "upload_time": time,
         "location": location
